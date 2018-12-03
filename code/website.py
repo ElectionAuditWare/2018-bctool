@@ -15,6 +15,8 @@ CODE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # Serving static files with CherryPy is a bit kludgy no matter how you do it,
 #   so let's just do it directly:
+# (If you'd like to be able to change the HTML with 'autoreloader', move this
+#   block into the definition of 'index'):
 with open(os.path.join(CODE_DIR, 'index.html'), 'r') as content_file:
     index_string = content_file.read()
 
