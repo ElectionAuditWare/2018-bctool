@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+           <meta charset="utf-8" />
            <style>
            input[type=text], select {
                width: 50%;
@@ -22,6 +26,9 @@
                border: 1px solid black;
            }
            </style>
+           <title>Bayesian Ballot Comparison Tool</title>
+   </head>
+   <body>
            <h1> Bayesian Ballot Comparison Tool </h1>
            <p>This module provides support for auditing of a single plurality contest
            over multiple jurisdictions using a Bayesian ballot-level
@@ -64,9 +71,9 @@
 
            <li><a href="http://people.csail.mit.edu/rivest/pubs.html#Riv18a">
            Bayesian Tabulation Audits: Explained and Extended</a>
-           by Ronald L. Rivest 
+           by Ronald L. Rivest
            2018
-           </li> 
+           </li>
 
            <li><a href="http://people.csail.mit.edu/rivest/pubs.html#Riv18b">
            Bayesian Election Audits in One Page</a>
@@ -77,20 +84,20 @@
            </ul>
 
            <h2>Implementation Note</h2>
-           <p> The code for this tool is available on github at 
+           <p> The code for this tool is available on github at
            <a href="https://github.com/ron-rivest/2018-bctool">www.github.com/ron-rivest/2018-bctool</a>.
-           This web form provides exactly the same functionality as the stand-alone 
+           This web form provides exactly the same functionality as the stand-alone
            Python tool
-           <a href=https://github.com/ron-rivest/2018-bctool>www.github.com/ron-rivest/2018-bctool/BCTool.py</a>. 
+           <a href=https://github.com/ron-rivest/2018-bctool>www.github.com/ron-rivest/2018-bctool/BCTool.py</a>.
            The Python tool
            requires an environment set up with Python 3 and Numpy.
-           This web form was implemented using 
+           This web form was implemented using
            <a href="https://github.com/cherrypy/cherrypy">
            CherryPy
            </a>.
            <p>(See <a href="https://github.com/ron-rivest/2018-bptool">www.github.com/ron-rivest/2018-bptool</a>
            for similar code for a Bayesian ballot-level polling audit.  The code here was based
-           in part on that code.)</p>
+           in part on that code.)
            </p>
 
 
@@ -109,22 +116,22 @@
            <table style="width:100%">
              <tr>
                <th style="text-align:center">Collection</th>
-               <th style="text-align:center">Votes</th> 
+               <th style="text-align:center">Votes</th>
                <th style="text-align:center">Comment</th>
              </tr>
              <tr>
                <td style="text-align:center">Bronx</td>
-               <td style="text-align:center">11000</td> 
+               <td style="text-align:center">11000</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Queens</td>
-               <td style="text-align:center">120000</td> 
+               <td style="text-align:center">120000</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Mail-In</td>
-               <td style="text-align:center">56000</td> 
+               <td style="text-align:center">56000</td>
                <td style="text-align:center"></td>
              </tr>
            </table>
@@ -136,9 +143,9 @@
            (that is, the number of cast paper ballots in the collection).
            An additional column for optional comments is provided.</p>
 
-           
+
            Collections File: <input type="file" name="collections" />
-       
+
            <h2>Step 2: Upload Reported Votes File</h2>
 
            <p> In the box below, upload a CSV file with the data about the reported votes
@@ -152,50 +159,50 @@
            <table style="width:100%">
              <tr>
                <th style="text-align:center">Collection</th>
-               <th style="text-align:center">Reported</th> 
-               <th style="text-align:center">Votes</th> 
+               <th style="text-align:center">Reported</th>
+               <th style="text-align:center">Votes</th>
                <th style="text-align:center">Comment</th>
              </tr>
              <tr>
                <td style="text-align:center">Bronx</td>
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">8500</td> 
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">8500</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Bronx</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">2500</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">2500</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Queens</td>
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">100000</td> 
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">100000</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Queens</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">20000</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">20000</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Mail-In</td>
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">5990</td> 
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">5990</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Mail-In</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">50000</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">50000</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Mail-In</td>
-               <td style="text-align:center">Overvote</td> 
-               <td style="text-align:center">10</td> 
+               <td style="text-align:center">Overvote</td>
+               <td style="text-align:center">10</td>
                <td style="text-align:center"></td>
              </tr>
            </table>
@@ -222,7 +229,7 @@
            or "-noCVR" or any identifier starting with a "-".  (Tagging
            the identifier with an initial "-" prevents it from becoming
            elegible for winning the contest.)</p>
-           
+
            Reported Votes File: <input type="file" name="reported_votes" />
 
            <h2>Step 3: Upload Sampled Votes File</h2>
@@ -238,72 +245,72 @@
            <table style="width:100%">
              <tr>
                <th style="text-align:center">Collection</th>
-               <th style="text-align:center">Reported</th> 
-               <th style="text-align:center">Actual</th> 
-               <th style="text-align:center">Votes</th> 
+               <th style="text-align:center">Reported</th>
+               <th style="text-align:center">Actual</th>
+               <th style="text-align:center">Votes</th>
                <th style="text-align:center">Comment</th>
              </tr>
              <tr>
                <td style="text-align:center">Bronx</td>
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">62</td> 
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">62</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Bronx</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">21</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">21</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Bronx</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">Overvote</td> 
-               <td style="text-align:center">1</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">Overvote</td>
+               <td style="text-align:center">1</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Queens</td>
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">504</td> 
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">504</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Queens</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">99</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">99</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Mail-In</td>
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">Yes</td> 
-               <td style="text-align:center">17</td> 
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">Yes</td>
+               <td style="text-align:center">17</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Mail-In</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">73</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">73</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Mail-In</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">Lizard People</td> 
-               <td style="text-align:center">2</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">Lizard People</td>
+               <td style="text-align:center">2</td>
                <td style="text-align:center"></td>
              </tr>
              <tr>
                <td style="text-align:center">Mail-In</td>
-               <td style="text-align:center">No</td> 
-               <td style="text-align:center">Lizard People</td> 
-               <td style="text-align:center">1</td> 
+               <td style="text-align:center">No</td>
+               <td style="text-align:center">Lizard People</td>
+               <td style="text-align:center">1</td>
                <td style="text-align:center"></td>
              </tr>
            </table>
@@ -343,13 +350,13 @@
            <h2>(Optional) Specify number of trials</h2>
            <p>Bayesian audits work by simulating the data which hasn't been sampled to
            estimate the chance that each candidate would win a full hand recount.
-           You may specify in the box below the number of 
+           You may specify in the box below the number of
            trials used to compute these estimates.
            This is an optional parameter, defaulting to 10000.  Making it smaller
            will decrease accuracy and improve running time; making it larger will
-           improve accuracy and increase running time. 
+           improve accuracy and increase running time.
            </p>
-        
+
            Number of trials:<input type="text" name="num_trials" />
 
            <h2>Compute results</h2>
@@ -360,4 +367,6 @@
            Note: The Bayesian prior is represented by a pseudocount of one vote for
            each choice.  This may become an optional input parameter later.
            </form>
+   </body>
+</html>
 
